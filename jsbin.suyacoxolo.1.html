@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/suyacoxolo/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="css/style-forALTIS.css">
+<style id="jsbin-css">
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*
+	BASE
+*/
+
+body {
+	/* 100% */
+	font-size: 16px;
+	font-family: arial, sans-serif;
+	line-height: 150%;
+}
+
+a {
+	color: #e40000;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/*
+	LAYOUT
+*/
+
+.container {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.logo a {
+	width: 250px;
+	height: 49px;
+	display: inline-block;
+	background: url("http://placehold.it/250x49") no-repeat 0 0;
+	text-indent: 100%;
+	overflow: hidden;
+}
+
+.bg-light {
+	background: #404549;
+}
+
+.bg-light::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.bg-light a {
+	color: lightgray;
+}
+
+.bg-dark {
+	background: #2a2e31;
+	overflow: hidden;
+}
+
+.bg-dark a {
+	color: rgb(180, 180, 180);
+}
+
+.main {
+	width: 683px;
+	float: left;
+}
+
+.sidebar {
+	width: 318px;
+	float: right;
+}
+
+/*
+  Moudle
+*/
+
+.social-icon {
+	float:left;
+}
+
+.social-icon li {
+	display: inline-block;
+}
+
+.sub-menu {
+	float: right;
+}
+
+.sub-menu li {
+	display: inline-block;
+}
+
+.logo {
+	float: left;
+}
+
+
+
+
+
+.menu {
+	float: left;
+}
+
+.menu li {
+	display: inline-block;
+	position: relative;
+}
+
+.menu li:hover .s-menu {
+	display: block;
+}
+
+.s-menu {
+	display: none;
+	position: absolute;
+	background: #404549;
+	padding: 5px;
+}
+
+.s-menu li {
+	display: block;
+}
+
+
+
+
+
+.search-form {
+	float: right;
+}
+
+.img-caseshow {
+	overflow: hidden;
+}
+
+.img-caseshow figcaption {
+	position: relative;
+	top: -3em;
+}
+
+.thumb-big {
+	float: left;
+}
+
+.thumb-square {
+	float: left;
+	margin-left: 1em;
+}
+
+.list {
+	border: 1px solid #000;
+	width: 212px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding-left: 7px;
+}
+
+.list:nth-child(3n) {
+	margin-right: 0;
+}
+
+.page-navi {
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+	
+	<div class="header">
+	  <div class="bg-dark"><!--背景-->
+			<div class="container"><!--內容-->
+			  <ul class="social-icon">
+					<li><a href="#"><img src="http://placehold.it/30x30" alt=""></a></li>
+					<li><a href="#"><img src="http://placehold.it/30x30" alt=""></a></li>
+					<li><a href="#"><img src="http://placehold.it/30x30" alt=""></a></li>
+					<li><a href="#"><img src="http://placehold.it/30x30" alt=""></a></li>
+					<li><a href="#"><img src="http://placehold.it/30x30" alt=""></a></li>
+				</ul>
+				<ul class="sub-menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Forums</a></li>
+					<li><a href="#">Jobs</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>  
+	  </div>
+		<div class="bg-light"><!--背景-->
+			<div class="container"><!--內容-->
+			  <h1 class="logo"><a href="#">ALTIS</a></h1>
+					<ul class="menu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Download</a></li>
+						<li><a href="#">Drop Menu</a>
+						  <ul class="s-menu">
+						    <li><a href="#">Menu 1</a></li>
+						    <li><a href="#">Menu 2</a></li>
+						  </ul>
+						</li>
+						<li><a href="#">Purchase</a></li>
+						<li><a href="#">Drop Menu1</a>
+						  <ul class="s-menu">
+						    <li><a href="#">Menu 1</a></li>
+						    <li><a href="#">Menu 2</a></li>
+						  </ul>
+						</li>
+					</ul>
+					<div class="search-form">
+						<input type="text" placeholder="Search here...">
+						<button class="search-btn">search</button>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- body -->
+	<div class="container">
+	  <div class="img-caseshow">
+			
+			<figure class="thumb-big">
+				<img src="http://placehold.it/550x344" alt="">
+				<figcaption><a href="#">Augue Larooe turen efwjfio</a></figcaption>
+			</figure>
+			
+			<!-- <div class="thumb-square"> -->
+			  <figure class="thumb-square">
+			    <img src="http://placehold.it/200x160" alt="">
+				  <figcaption><a href="#">Augue Larooe turen efwjfio</a></figcaption>
+			  </figure>
+				<figure class="thumb-square">
+			    <img src="http://placehold.it/200x160" alt="">
+				  <figcaption><a href="#">Augue Larooe turen efwjfio</a></figcaption>
+			  </figure>
+				<figure class="thumb-square">
+			    <img src="http://placehold.it/200x160" alt="">
+				  <figcaption><a href="#">Augue Larooe turen efwjfio</a></figcaption>
+			  </figure>
+				<figure class="thumb-square">
+			    <img src="http://placehold.it/200x160" alt="">
+				  <figcaption><a href="#">Augue Larooe turen efwjfio</a></figcaption>
+			  </figure>
+			<!--</div>-->
+	  </div>
+		
+		<div class="main">
+			
+		  <div class="list">
+				<h2 class="title"><a href="#">Dusonine nineight neyshcl ehcilwf</a></h2>
+				<div class="list-thumb"><img src="http://placehold.it.150x150" alt=""></div>
+				<div class="date">Saturday, may 17, 2014</div>
+				<div class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, cupiditate. Necessitatibus doloremque, quidem non veniam pariatur voluptates, suscipit esse officiis, similique tempore rerum soluta, ratione sunt fuga qui dolor vitae.</div>
+				<div class="meta">
+					<div class="facebook-widget">讚</div>
+					<div class="more"><a href="#">More</a></div>
+				</div>		    
+		  </div>	
+			<div class="list">
+		    <h2 class="title"><a href="#">Dusonine nineight neyshcl ehcilwf</a></h2>
+				<div class="list-thumb"><img src="http://placehold.it.150x150" alt=""></div>
+				<div class="date">Saturday, may 17, 2014</div>
+				<div class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, cupiditate. Necessitatibus doloremque, quidem non veniam pariatur voluptates, suscipit esse officiis, similique tempore rerum soluta, ratione sunt fuga qui dolor vitae.</div>
+				<div class="meta">
+				  <div class="facebook-widget">讚</div>
+					<div class="more"><a href="#">More</a></div>
+				</div>
+		  </div>	
+			<div class="list">
+		    <h2 class="title"><a href="#">Dusonine nineight neyshcl ehcilwf</a></h2>
+				<div class="list-thumb"><img src="http://placehold.it.150x150" alt=""></div>
+				<div class="date">Saturday, may 17, 2014</div>
+				<div class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, cupiditate. Necessitatibus doloremque, quidem non veniam pariatur voluptates, suscipit esse officiis, similique tempore rerum soluta, ratione sunt fuga qui dolor vitae.</div>
+				<div class="meta">
+				  <div class="facebook-widget">讚</div>
+					<div class="more"><a href="#">More</a></div>
+				</div>
+		  </div>		
+			<div class="list">
+		    <h2 class="title"><a href="#">Dusonine nineight neyshcl ehcilwf</a></h2>
+				<div class="list-thumb"><img src="http://placehold.it.150x150" alt=""></div>
+				<div class="date">Saturday, may 17, 2014</div>
+				<div class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, cupiditate. Necessitatibus doloremque, quidem non veniam pariatur voluptates, suscipit esse officiis, similique tempore rerum soluta, ratione sunt fuga qui dolor vitae.</div>
+				<div class="meta">
+				  <div class="facebook-widget">讚</div>
+					<div class="more"><a href="#">More</a></div>
+				</div>
+		  </div>
+			
+			<ul class="page-navi">
+			  <li class="current">1</li>
+			  <li><a href="#">2</a></li>
+			  <li><a href="#">3</a></li>
+			  <li><a href="#">4</a></li>
+			  <li class="next"><a href="#">Next</a></li>
+			</ul>
+			
+		</div>
+		
+		<div class="sidebar">
+			<div class="side-box">
+			  <div class="side-title">
+					Popular Posts
+				</div>	
+				<div class="item-list">
+					<div class="item-thumb">
+					  <a href="#"><img src="http://placehold.it/150x150" alt=""></a>
+					</div>
+					<div class="item-group">
+					  <div class="item-title"><a href="#">標題</a></div>
+						<div class="item-excerpt">內文 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dignissimos, veniam beatae sit suscipit amet hic voluptate quos eaque aperiam!</div>
+					</div>
+				</div>
+				<div class="item-list">
+					<div class="item-thumb">
+					  <a href="#"><img src="http://placehold.it/150x150" alt=""></a>
+					</div>
+					<div class="item-group">
+					  <div class="item-title"><a href="#">標題</a></div>
+						<div class="item-excerpt">內文 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dignissimos, veniam beatae sit suscipit amet hic voluptate quos eaque aperiam!</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="side-box">
+			  <div class="item-list">
+				  <a href="#"><img src="http://placehold.it/300x250" alt=""></a>
+				</div>
+			</div>			
+		</div>
+		
+		<div class="ads"><a href="#"><img src="http://placehold.it/728x90" alt=""></a></div>
+		
+	</div><!--sidebar 結束-->
+	
+	<div class="footer">
+	  <div class="bg-light">
+	    <div class="container">
+	      <div class="widget-footer">
+	        <div class="widget-box">A</div>
+	        <div class="widget-box">B</div>
+	        <div class="widget-box">C</div>
+	      </div>
+	    </div>
+	  </div>
+		<div class="bg-dark">
+		  <div class="copyright">
+		    <p>copyright</p>
+				<p>All rights reserved.</p>
+		  </div>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+
+
+

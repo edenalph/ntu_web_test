@@ -1,0 +1,95 @@
+@import reset.css;
+
+
+body {
+	/* 100% */
+	font-size: 16px;
+	font-family: arial, sans-serif;
+	line-height: 150%;
+}
+
+a {
+	color: #e40000;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/*
+	LAYOUT
+*/
+
+
+
+
+
+
+.container {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.bg-light {
+	background: #404549;
+}
+
+.bg-light a {
+	color: lightgray;
+}
+
+.bg-dark {
+	background: #2a2e31;
+}
+
+.bg-dark a {
+	color: rgb(180, 180, 180);
+}
+
+
+.menu li{
+    display: inline-block;
+}
+.menu li:hover .s-menu{
+display:block;
+}
+
+.s-menu{
+    position:absolute;
+    top: 10px; /*sub menu往下跑10px*/
+}
+
+.s-menu li{
+    display: block;    
+}
+
+
+
+.thumb-big{
+    float:left;
+    margin-left: 1em;
+    
+}
+.thumb-square1{
+    
+    foat:lefft;
+    
+}
+.img-caseshow{
+    overflow: hidden;/*important*/
+}
+
+.img-caseshow figcaption{
+    position:relative;
+    top:-3em;
+    
+}
+
+
+
+
+
+/* ul li:first-child {
+  color: red;
+} */
